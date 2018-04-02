@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="customers-micro-services"/>
+<aop-project name="orders-micro-services"/>
+<aop-project name="config-server"/>
+<aop-project name="pricing-micro-services"/>
+<aop-project name="eureka-server"/>
+<aop-project name="admin-users-micro-services"/>
+<aop-project name="contributions-micro-services"/>
+<aop-project name="stock-micro-services"/>
+<aop-project name="proxy-server"/>
+</aop-reference-model>

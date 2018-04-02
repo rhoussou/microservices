@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\stock-micro-services"/>
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\proxy-server"/>
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\pricing-micro-services"/>
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\orders-micro-services"/>
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\eureka-server"/>
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\config-server"/>
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\contributions-micro-services"/>
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\admin-users-micro-services"/>
+		<item value="C:\Users\rhoussou\projects\personal\javaProjects\microservices\customers-micro-services"/>
+	</list>
+</section>
