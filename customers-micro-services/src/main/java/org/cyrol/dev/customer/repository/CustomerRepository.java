@@ -9,13 +9,11 @@ import org.cyrol.dev.customer.models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-
 /**
  * @author roland
  *
  */
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
-	
 	
 	Optional<Customer> findByEmail(String email);
 	

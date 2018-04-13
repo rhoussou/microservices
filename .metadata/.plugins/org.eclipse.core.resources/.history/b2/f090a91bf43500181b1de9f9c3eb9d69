@@ -1,3 +1,0 @@
-spring.application.name=proxy-server
-#address of config server
-spring.cloud.config.uri=http://localhost:8888

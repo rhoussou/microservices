@@ -21,6 +21,6 @@ public class Authority {
     private AuthorityName name;
 
     @ManyToMany(mappedBy = "authorities",fetch = FetchType.LAZY)
-    private Set<Customer> users;
+    private Set<Customer> customers;
 
 }

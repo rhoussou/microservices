@@ -2,9 +2,9 @@ package org.cyrol.dev.models;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,9 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Commande")
@@ -31,15 +29,17 @@ public class Order {
 	private Long customerId;
 
 	private Status status;
-	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
-	private DateTime orderedDate;
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	
+	@Temporal(TemporalType.DATE)
+	private Date orderedDate;
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<Item> items = new HashSet<Item>();
 
 	public Order(Collection<Item> items) {
 		this.status = Status.PAYMENT_EXPECTED;
 		this.items.addAll(items);
-		this.orderedDate = new DateTime();
+		this.orderedDate = new Date();
 	}
 
 	public Order(Item... items) {
@@ -66,16 +66,7 @@ public class Order {
 		this.customerId = id;
 	}
 
-	public MonetaryAmount getPrice() {
-		MonetaryAmount result = MonetaryAmount.ZERO;
-
-		for (Item item : items) {
-			result = result.add(item.getPrice());
-		}
-
-		return result;
-	}
-
+	
 	public void markPaid() {
 
 		if (isPaid()) {
@@ -126,7 +117,7 @@ public class Order {
 		this.status = status;
 	}
 
-	public DateTime getOrderedDate() {
+	public Date getOrderedDate() {
 		return orderedDate;
 	}
 

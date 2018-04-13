@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="org.cyrol.dev.exception.BadRequestException"/>
-<fullyQualifiedTypeName name="javax.validation.Valid"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.MethodArgumentNotValidException"/>
 <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
 <fullyQualifiedTypeName name="org.cyrol.dev.utils.ValidationUtil"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.context.config.annotation.RefreshScope"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.security.authentication.AuthenticationManager"/>
+<fullyQualifiedTypeName name="java.util.Objects"/>
+<fullyQualifiedTypeName name="org.springframework.util.Assert"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+<fullyQualifiedTypeName name="javax.validation.Valid"/>
+<fullyQualifiedTypeName name="org.cyrol.dev.repositories.ProductRepository"/>
+<fullyQualifiedTypeName name="org.cyrol.dev.models.Product"/>
+<fullyQualifiedTypeName name="org.cyrol.dev.models.SubCategory"/>
+<fullyQualifiedTypeName name="org.cyrol.dev.models.Variant"/>
+<fullyQualifiedTypeName name="org.cyrol.dev.repositories.VariantRepository"/>
+<fullyQualifiedTypeName name="org.cyrol.dev.exception.ResourceNotFoundException"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="org.cyrol.dev.models.Category"/>
+<fullyQualifiedTypeName name="net.bytebuddy.dynamic.DynamicType.Builder.FieldDefinition.Optional"/>
+<fullyQualifiedTypeName name="java.util.Optional"/>
+<fullyQualifiedTypeName name="org.cyrol.dev.services.CategoryServiceInterface"/>
 </qualifiedTypeNameHistroy>

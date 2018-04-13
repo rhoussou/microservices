@@ -1,20 +1,15 @@
 package org.cyrol.dev.customer.controller;
 
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-
 import javax.validation.Valid;
-
 import org.cyrol.dev.customer.models.Customer;
 import org.cyrol.dev.customer.repository.CustomerRepository;
-import org.cyrol.dev.customer.services.UploadFileService;
 import org.cyrol.dev.exception.BadRequestException;
 import org.cyrol.dev.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 
 @CrossOrigin(origins = "*")
@@ -22,15 +17,9 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 @RequestMapping("/customers")
 public class CustomerController {
 	
-	//Save the uploaded file to this folder
-    private static String UPLOADED_FOLDER = "/home/roland/Documents/Project/java/CYROLGESTOCK/upload";
-	
-	
 	@Autowired
     private CustomerRepository customerRepository;
 	
-	@Autowired
-    private UploadFileService uploadFileService;
 	
     @GetMapping
     public List<Customer> getCustomers() {
@@ -58,7 +47,6 @@ public class CustomerController {
     	customerRepository.save(customer);
     }
     
-    
     @GetMapping("/{id}")
     public Customer getCustomer(@PathVariable("id") long id) throws ResourceNotFoundException{
     	Optional<Customer> customer = customerRepository.findById(id);
@@ -68,12 +56,4 @@ public class CustomerController {
     	return customer.get();
     }
 
-    
-    @PostMapping("/upload")
-    public void UploadFile(MultipartHttpServletRequest request,@RequestParam("id") String id) throws IOException {
-    	uploadFileService.SingleFileUpload(request,id, UPLOADED_FOLDER);
-    }
-    
-
-    
 }

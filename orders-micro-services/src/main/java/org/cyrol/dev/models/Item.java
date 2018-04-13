@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Item {
@@ -20,7 +22,11 @@ public class Item {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
-
+	
+	@ManyToOne
+    @JoinColumn(name = "orderid")
+    private Order order;
+	
 	
 	public Long getId() {
 		return this.id;
@@ -63,5 +69,13 @@ public class Item {
 	public void setPrice(MonetaryAmount price) {
 		this.price = price;
 	}
+	
+	public Order getOrder() {
+        return order;
+    }
+	
+	public void setOrder(Order order) {
+        this.order = order;
+    }
 
 }
